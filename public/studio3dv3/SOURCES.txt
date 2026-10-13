@@ -1,0 +1,24 @@
+V-Styler / Studio v3 assets
+
+Base human geometry, targets, hair, eyes, brows, lashes, skin maps,
+male_casualsuit02 clothing source and shoes02 source: MakeHuman core assets.
+Source package: makehuman_system_assets_cc0.zip (retained locally).
+Project homepage: http://www.makehumancommunity.org
+License: CC0. The source .mhclo/.mhmat headers explicitly record release
+to CC0 in September 2020. Original credited holders include Data Collection AB,
+Joel Palmius and Jonas Hauquier. CC0: https://creativecommons.org/publicdomain/zero/1.0/
+
+Evaluated locally with MPFB / Blender. This package distributes derived asset
+data and image textures, not MPFB's application/add-on source code.
+
+Female hair: ponytail01. Male hair: short04. Eye map: brown_eye.png.
+Skin maps: young_lightskinned_female_diffuse3.png and
+young_lightskinned_male_diffuse3.png; warm tint applied in renderer.
+
+Face/body proportions: configurable foundation v3, Asian-style reference.
+No claim of an exact Vietnamese identity or reconstruction of a real person.
+No rig or calibrated measurement morph targets supplied in these JSON assets.
+
+Việt phục surfaces, jacquard textures, scene geometry, wardrobe illustrations
+and interaction code: local procedural implementation for this project.
+Garments are adaptive styling prototypes, not verified historical patterns.

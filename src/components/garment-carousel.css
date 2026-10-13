@@ -1,0 +1,97 @@
+.garment-archive{position:relative;isolation:isolate;height:var(--archive-available-height,calc(100svh - 106px));min-height:280px;width:100%;display:flex;flex-direction:column;overflow:hidden;padding:18px clamp(12px,3vw,40px) 18px;color:#11383a;background:#f8f5ee}
+.archive-scenery{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 65%;opacity:.42;z-index:-3;pointer-events:none;user-select:none}
+.archive-scenery-wash{position:absolute;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(180deg,rgba(248,245,238,.45),rgba(248,245,238,.14) 58%,rgba(248,245,238,.3))}
+.archive-water-lines{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.garment-archive__heading{position:absolute;top:8px;left:clamp(12px,3vw,40px);right:clamp(12px,3vw,40px);z-index:25;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+.garment-archive__heading h1{margin:0;font:400 22px/1.2 "Cormorant Garamond",Georgia,serif}
+.garment-archive__heading button{display:flex;align-items:center;gap:8px;min-height:44px;background:transparent;border:0;padding:0 8px;font:400 13px "Outfit",sans-serif;color:inherit;cursor:pointer;pointer-events:auto}
+.garment-archive__display{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr) 56px;gap:8px;align-items:stretch;width:100%;max-width:1600px;margin:28px auto 0;flex:1;min-height:0}
+.garment-stage{position:relative;width:100%;height:100%;overflow:hidden;touch-action:pan-y;user-select:none}
+.garment-specimen{position:absolute;top:50%;height:100%;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;cursor:pointer;transition:left 650ms cubic-bezier(.22,1,.36,1),transform 650ms cubic-bezier(.22,1,.36,1),opacity 400ms ease,filter 400ms ease}
+.garment-chevron{position:relative;align-self:center;z-index:30;display:grid;place-items:center;width:48px;height:56px;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent;color:#11383a;opacity:.65;cursor:pointer}
+.garment-chevron:hover{opacity:1}
+.garment-chevron--left{justify-self:start}.garment-chevron--right{justify-self:end}
+.garment-chevron svg{width:36px;height:36px;stroke-width:1.2}
+.garment-archive button:focus-visible,.garment-stage:focus-visible{outline:2px solid #74816d;outline-offset:3px}
+.garment-archive .carousel-caption{margin:8px 0 0;flex:0 0 auto;text-align:center}
+.garment-archive .carousel-caption h2{margin:0;color:#11383a;font:400 clamp(2.1rem,3.2vw,3rem)/1.08 "Cormorant Garamond",Georgia,serif;letter-spacing:-.015em}
+.explore-hero{position:relative;isolation:isolate;width:100%;height:var(--explore-available-height,calc(100svh - 106px));min-height:460px;overflow:hidden}
+.explore-hero__content{position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;width:100%;max-width:1100px;margin:0 auto;padding:clamp(30px,7vh,64px) 24px 24px;text-align:center}
+.explore-hero__title{margin:0;color:#11383a;font:400 clamp(3rem,5.4vw,5.2rem)/1.02 "Cormorant Garamond",Georgia,serif;letter-spacing:-.025em;text-wrap:balance}
+.explore-hero__title span,.explore-hero__title em{display:block}
+.explore-hero__title em{font-weight:400;color:#496553}
+.explore-hero__intro{margin:20px 0 0;max-width:560px;color:#42574d;font:400 clamp(16px,1.5vw,19px)/1.55 "Outfit",sans-serif;text-wrap:balance;letter-spacing:0}
+.explore-hero__actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px 24px;margin-top:24px}
+.explore-hero__actions button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 22px;cursor:pointer;font:400 15px/1.3 "Outfit",sans-serif;letter-spacing:0;transition:background-color 180ms,color 180ms}
+.explore-hero__primary{border:1px solid #11383a;border-radius:2px;background:#11383a;color:#f8f5ee}
+.explore-hero__primary:hover{background:#234e4d}
+.explore-hero__secondary{border:0;border-radius:2px;background:rgba(248,245,238,.92);color:#11383a;text-decoration:underline;text-decoration-color:#a9b4a5;text-underline-offset:6px}
+.explore-hero__secondary:hover{text-decoration-color:#11383a}
+.explore-hero button:focus-visible{outline:2px solid #74816d;outline-offset:4px}
+@media(max-width:639px){.explore-hero__content{padding:32px 20px 20px}.explore-hero__title{font-size:clamp(2.8rem,9.4vw,3.7rem)}.explore-hero__intro{margin-top:16px}.explore-hero__actions{gap:6px;margin-top:18px}.explore-hero__actions button{padding:10px 16px}.garment-archive__heading h1{font-size:19px}.garment-archive__heading button span{display:none}}
+@media(prefers-reduced-motion:reduce){.garment-specimen{transition:none}}
+@media(max-width:639px){[aria-label="Thông báo nghiên cứu"]>div>div{min-width:0;flex:1}[aria-label="Thông báo nghiên cứu"] .truncate{white-space:normal;line-height:1.4}}
+
+/* Full-bleed pages; navigation overlays rather than shrinking the art stage. */
+.app-shell{isolation:isolate}.app-surface{min-height:100svh;display:flex;flex-direction:column;transition:filter 320ms ease}.app-surface.is-menu-open{filter:blur(7px)}.app-page:focus{outline:none}
+/* Desktop reading room: one quiet stage, independently scrolling dossier. */
+.garment-detail{height:100svh;min-height:580px;overflow:hidden;background:radial-gradient(ellipse at 52% 62%,#e3e9df55,transparent 55%),#f8f5ee;color:#11383a;padding:38px clamp(28px,4vw,76px) 24px;font-family:"Outfit",sans-serif}
+.garment-detail__header{height:38px;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:#596e64}
+.garment-detail__header>span{font:400 24px "Cormorant Garamond",Georgia,serif}.garment-detail button{cursor:pointer}.detail-back,.detail-motion{display:flex;align-items:center;gap:10px;border:0;background:none;color:inherit;padding:8px 0;font:inherit}
+.garment-detail__grid{display:grid;grid-template-columns:minmax(230px,1fr) minmax(370px,2.6fr) minmax(210px,.85fr);gap:clamp(22px,3vw,56px);height:calc(100% - 48px);margin-top:10px}
+.detail-history{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#9dab9c transparent;padding:30px 18px 40px 0;scroll-behavior:smooth}
+.detail-kicker{font:400 12px "Outfit",sans-serif;color:#8b8067;letter-spacing:.08em;margin:0 0 14px}
+.garment-detail h2{font:400 clamp(27px,2.5vw,40px)/1.04 "Cormorant Garamond",Georgia,serif;margin:0 0 24px;letter-spacing:-.02em}.garment-detail h2 em{color:#658071;font-weight:400}
+.detail-history p:not(.detail-kicker){font:400 14px/1.85 "Inter",sans-serif;color:#59685f;margin:14px 0}.detail-history h3{font:400 21px/1.2 "Cormorant Garamond",Georgia,serif;margin:8px 0}
+.detail-source{font:400 12px/1.65 "Outfit",sans-serif;color:#637d70;text-decoration:underline;text-underline-offset:4px;display:block}.detail-timeline{border-left:1px solid #c5cbbc;margin:32px 0;padding-left:20px}.detail-timeline article{margin-bottom:28px}.detail-timeline article>span{font:400 13px "Outfit",sans-serif;color:#938365}
+.detail-history figure{margin:26px 0 14px}.detail-history figure img{width:100%;max-height:340px;object-fit:contain;background:#e9e5d9}.detail-history figcaption{font:400 11px/1.6 "Outfit",sans-serif;color:#7e887b;margin-top:9px}.detail-research{border-top:1px solid #d5d8ca;margin-top:28px;padding-top:18px}
+.historical-photos{border-top:1px solid #d5d8ca;margin-top:30px;padding-top:20px}
+.detail-history .historical-photo{margin:22px 0 32px}.detail-history .historical-photo img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;filter:grayscale(1);background:#e9e5d9}
+.detail-history p.historical-photo__date{font:400 13px/1.5 "Outfit",sans-serif;color:#8b785c;margin:0 0 10px}
+.detail-history .historical-photo figcaption p{font:400 13px/1.75 "Inter",sans-serif;margin:12px 0 8px}.historical-photo figcaption span{display:block;font:400 11px/1.7 "Outfit",sans-serif}
+.historical-photo__links{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px}.historical-photo__provenance{margin-top:14px;font:400 12px/1.7 "Outfit",sans-serif;color:#778477}.historical-photo__provenance summary{cursor:pointer}.detail-history .historical-photo__provenance p{font:400 12px/1.75 "Inter",sans-serif}
+.historical-photo a:focus-visible,.historical-photo summary:focus-visible{outline:2px solid #74816d;outline-offset:4px}
+.detail-specimen{min-width:0;display:flex;flex-direction:column;align-items:center;min-height:0}.detail-specimen__art{flex:1;min-height:0;width:100%}.detail-specimen h1{flex-shrink:0;margin:0;padding:8px 0 6px;font:400 clamp(32px,3.5vw,54px)/1.1 "Cormorant Garamond",Georgia,serif;letter-spacing:-.02em}
+.detail-palette{display:flex;flex-direction:column;align-items:flex-start;padding:30px 0 16px;min-height:0;overflow-y:auto;scrollbar-width:thin}.detail-swatches{display:grid;grid-template-columns:repeat(3,38px);gap:16px;margin:4px 0 28px}.detail-swatches button{width:38px;height:38px;border-radius:50%;background:var(--swatch);border:3px solid #f8f5ee;box-shadow:0 0 0 1px #b5bbae}.detail-swatches button[aria-pressed=true]{box-shadow:0 0 0 2px #11383a}
+.detail-wheel{position:relative;display:flex;gap:14px;align-items:center;font-size:13px;cursor:pointer}.detail-wheel__ring{display:block;width:72px;height:72px;border-radius:50%;background:conic-gradient(#d57b7d,#d8b576,#9aa973,#6aa8a2,#738fbb,#b183b8,#d57b7d);border:12px solid transparent;box-shadow:inset 0 0 0 14px #f8f5ee}.detail-wheel input{position:absolute;left:0;top:0;width:72px;height:72px;opacity:0;cursor:pointer}.detail-color-value{font:400 12px "Outfit",sans-serif;color:#7c897d;margin:18px 0 12px}.detail-reset{display:flex;gap:8px;align-items:center;background:none;border:0;color:#637b6c;font:400 12px "Outfit",sans-serif;padding:6px 0}.detail-palette__bottom{margin-top:auto;padding-top:24px;width:100%}.detail-palette__bottom p{font:400 16px/1.6 "Cormorant Garamond",Georgia,serif;color:#768573}.detail-style-cta{width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border:0;border-radius:2px;background:#11383a;color:#f8f5ee;font:400 15px "Outfit",sans-serif}.detail-text-cta{display:flex;gap:12px;align-items:center;background:none;border:0;border-bottom:1px solid #839680;padding:12px 0;color:#11383a;font:400 13px "Outfit",sans-serif;margin-top:28px}
+.garment-detail button:focus-visible,.garment-detail input:focus-visible,.detail-history:focus-visible{outline:2px solid #74816d;outline-offset:5px}.detail-style-cta:hover{background:#28524e}
+.bamboo-passage{position:fixed;inset:0;overflow:hidden;z-index:120;pointer-events:all;isolation:isolate}
+.bamboo-passage__veil{position:absolute;inset:0;background:#f0f0e5;animation:bamboo-cover 3200ms ease-in-out both}
+.bamboo-atmosphere{position:absolute;inset:-10%;background:radial-gradient(ellipse at 50% 64%,#faf8ed 0%,#e1e9db88 42%,#9fb8a166 100%);animation:bamboo-breath 3200ms ease-in-out both}
+.bamboo-depth{position:absolute;inset:-5%;width:110%;height:110%;transform-origin:50% 55%;will-change:transform,opacity;animation:bamboo-depth 3200ms cubic-bezier(.25,.15,.23,1) both}
+.bamboo-depth--far{--ink-opacity:.25;--end-scale:1.2;--start-scale:.95;filter:blur(1.8px)}
+.bamboo-depth--middle{--ink-opacity:.52;--end-scale:1.45;--start-scale:.85;filter:blur(.35px)}
+.bamboo-depth--near{--ink-opacity:.93;--end-scale:1.95;--start-scale:.7}
+.bamboo-mist{position:absolute;inset:-20%;background:radial-gradient(ellipse at 35% 75%,#faf9eecc,transparent 52%),radial-gradient(ellipse at 75% 30%,#f7f6e8bb,transparent 45%);animation:bamboo-mist 3200ms ease-in-out both;pointer-events:none}
+.bamboo-mist--1{rotate:-8deg;background:radial-gradient(ellipse at 25% 70%,#f8f8edcc,transparent 50%),radial-gradient(ellipse at 85% 88%,#e9efdf99,transparent 45%)}
+.bamboo-leaves{transform-box:fill-box;transform-origin:0% 60%;animation:bamboo-leaves 3200ms ease-in-out both}
+@keyframes bamboo-cover{0%,14%{opacity:0}43%,55%{opacity:1}100%{opacity:0}}
+@keyframes bamboo-breath{0%{opacity:0;transform:scale(.96)}24%,58%{opacity:1}100%{opacity:0;transform:scale(1.2)}}
+@keyframes bamboo-depth{0%{opacity:0;transform:scale(var(--start-scale))}22%{opacity:var(--ink-opacity)}48%{opacity:var(--ink-opacity);transform:scale(1)}72%{opacity:calc(var(--ink-opacity)*.8)}100%{opacity:0;transform:scale(var(--end-scale))}}
+@keyframes bamboo-mist{0%{opacity:0;transform:translate3d(-4%,3%,0)}26%,64%{opacity:.85}100%{opacity:0;transform:translate3d(6%,-5%,0)}}
+@keyframes bamboo-leaves{0%{transform:rotate(calc(var(--leaf-turn)*-1))}52%{transform:rotate(var(--leaf-turn))}100%{transform:rotate(0deg)}}
+@media(prefers-reduced-motion:reduce){.bamboo-passage *{animation:none!important}.detail-history{scroll-behavior:auto}}
+.garment-detail{display:flex;flex-direction:column;box-sizing:border-box;min-height:460px}.garment-detail__header{flex-shrink:0}.garment-detail__grid{height:auto;flex:1;min-height:0}
+.detail-palette>*{flex-shrink:0}
+@media(min-width:1024px) and (max-height:800px){.garment-detail{padding-top:22px;padding-bottom:20px}.detail-palette{padding-top:16px;padding-bottom:0}.detail-palette .detail-kicker{margin-bottom:8px}.detail-palette h2{font-size:30px;margin-bottom:16px}.detail-swatches{grid-template-columns:repeat(3,30px);gap:12px;margin:0 0 16px}.detail-swatches button{width:30px;height:30px}.detail-wheel__ring,.detail-wheel input{width:54px;height:54px}.detail-wheel__ring{border-width:8px;box-shadow:inset 0 0 0 10px #f8f5ee}.detail-color-value{margin:12px 0 6px}.detail-palette__bottom{padding-top:14px}.detail-palette__bottom p{font-size:14px;line-height:1.35;margin:8px 0 12px}.detail-style-cta{padding:13px 16px}}
+.navbar-shell{position:fixed;inset:0 0 auto;height:24px;z-index:80;color:#11383a}
+.navbar-panel{position:absolute;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;min-height:88px;padding:20px clamp(24px,6vw,110px);padding-right:80px;background:rgba(248,245,238,.98);border-bottom:1px solid rgba(17,56,58,.1);transform:translateY(-110%);opacity:0;visibility:hidden;transition:transform 360ms cubic-bezier(.22,1,.36,1),opacity 240ms,visibility 0s 360ms}
+.navbar-shell.is-open .navbar-panel{transform:translateY(0);opacity:1;visibility:visible;transition-delay:0s}
+.navbar-brand{border:0;background:transparent;padding:0;color:inherit;font:400 clamp(24px,2.5vw,34px)/1.1 "Cormorant Garamond",Georgia,serif;white-space:nowrap;cursor:pointer}
+.navbar-panel nav{display:flex;gap:clamp(18px,3vw,42px);align-items:center}
+.navbar-panel nav button{padding:8px 0;border:0;border-bottom:1px solid transparent;background:transparent;color:#465950;font:400 15px/1.3 "Outfit",sans-serif;white-space:nowrap;cursor:pointer}
+.navbar-panel nav button[aria-current="page"],.navbar-panel nav button:hover{border-bottom-color:#11383a;color:#11383a}
+.navbar-trigger{position:absolute;left:calc(50% - 32px);top:0;z-index:2;display:grid;place-items:center;width:64px;height:24px;padding:0;border:0;background:transparent;color:#11383a;cursor:pointer}
+.navbar-trigger__hint{width:32px;height:2px;background:currentColor;opacity:.35;border-radius:2px}.navbar-trigger svg{display:none;width:22px;height:22px;stroke-width:1.3}
+.navbar-shell.is-open .navbar-trigger{left:auto;right:20px;top:20px;width:44px;height:44px}.navbar-shell.is-open .navbar-trigger__hint{display:none}.navbar-shell.is-open .navbar-trigger svg{display:block}
+.navbar-shell button:focus-visible{outline:2px solid #74816d;outline-offset:4px}
+.navigation-scrim{position:fixed;inset:0;z-index:70;border:0;padding:0;background:rgba(248,245,238,.12);cursor:default}
+.cloud-passage{position:fixed;inset:0;z-index:120;overflow:hidden;pointer-events:all;perspective:900px}
+.cloud-passage__veil{position:absolute;inset:0;background:#f3f4ef;animation:cloud-cover 2400ms ease-in-out both}
+.cloud-plane{position:absolute;inset:-15%;width:130%;height:130%;transform-origin:50% 45%;will-change:transform,opacity;animation:cloud-through 2400ms cubic-bezier(.3,.1,.35,1) both}
+.cloud-plane--1{animation-duration:2300ms;animation-delay:50ms;transform-origin:42% 52%;opacity:.8}
+.cloud-plane--2{animation-duration:2200ms;animation-delay:100ms;transform-origin:58% 44%}
+@keyframes cloud-cover{0%,22%{opacity:0}42%,54%{opacity:1}82%,100%{opacity:0}}
+@keyframes cloud-through{0%{opacity:0;transform:translate3d(0,2%,0) scale(.55)}18%{opacity:1}70%{opacity:1}100%{opacity:0;transform:translate3d(-2%,-4%,0) scale(2.8)}}
+@media(max-width:767px){.navbar-shell{height:18px}.navbar-trigger{left:auto;right:10px;top:8px;width:44px;height:44px;background:rgba(248,245,238,.8)}.navbar-trigger__hint{display:none}.navbar-trigger svg{display:block}.navbar-panel{flex-direction:column;align-items:flex-start;gap:22px;padding:24px 24px 28px;max-height:100svh;overflow:auto}.navbar-panel nav{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}.navbar-panel nav button{text-align:left;min-height:44px}.navbar-shell.is-open .navbar-trigger{right:10px;top:14px}}
+@media(prefers-reduced-motion:reduce){.app-surface,.navbar-panel{transition:none}.cloud-passage__veil,.cloud-plane{animation:none}}

@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  --archive-teal: #11383A;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-ui: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #F8F5EE;
+  color: #1A2421;
+}
+
+h1, h2, h3, .font-serif, .font-serif-editorial {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.carousel-caption {
+  text-align: center;
+}
+
+.carousel-caption h2 {
+  margin: 0;
+  color: var(--archive-teal);
+  font: 400 clamp(2.2rem, 4vw, 3.6rem)/1 "Cormorant Garamond", Georgia, serif;
+  text-align: center;
+}
+
+.garment-carousel__item {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.carousel-arrow {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.carousel-arrow:focus-visible {
+  outline: 2px solid #11383A;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle landscape mist gradient and archival textures */
+.bg-parchment {
+  background-color: #F8F5EE;
+}
+
+.bg-parchment-soft {
+  background-color: #F3EFE6;
+}
+
+.bg-parchment-card {
+  background-color: #FCFAF6;
+}
+
+.text-ink-teal {
+  color: #11383A;
+}
+
+.bg-ink-teal {
+  background-color: #11383A;
+}
+
+.text-moss-green {
+  color: #2E473B;
+}
+
+.bg-moss-green {
+  background-color: #2E473B;
+}
+
+.border-archival {
+  border-color: rgba(26, 36, 33, 0.12);
+}
+
+.border-archival-subtle {
+  border-color: rgba(26, 36, 33, 0.07);
+}
+
+/* Tactile Dó paper / antique silk parchment background with subtle contour pattern */
+.contour-pattern {
+  background-color: #F8F5EE;
+  background-image: 
+    radial-gradient(#DECFA6 0.85px, transparent 0.85px),
+    radial-gradient(#DECFA6 0.85px, #F8F5EE 0.85px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* Custom scrollbar for archival feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3EFE6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C7C0B0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9D9686;
+}
+
+/* Scoped Manifesto Section: typography & entrance animation */
+.manifesto-container {
+  font-family: 'Outfit', sans-serif;
+  animation: manifestoEntrance 560ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.manifesto-container h1,
+.manifesto-container h2,
+.manifesto-container .font-serif,
+.manifesto-container blockquote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+@keyframes manifestoEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .manifesto-container {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "V-Styler Atelier",
+  "description": "Editorial digital atelier styling traditional Vietnamese garments (Việt phục) for modern occasions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
